@@ -1,0 +1,43 @@
+.header {
+    position: relative;
+
+    height: 100vh;
+    margin-bottom: rem(157);
+
+    &__main-nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+    
+        padding-bottom: rem(45);
+        box-sizing: border-box;
+    
+        z-index: 10;
+    }
+    
+    &__map {
+        position: absolute;
+        right: 0;
+        top: 0;
+    
+        z-index: 3;
+    }
+    
+    &__arrows-down-link {
+        position: absolute;
+        bottom: 41px;
+        left: 209px;
+    
+        width: 20px;
+        height: 24px;
+    }
+    
+    &__pagination {
+        position: absolute;
+        right: 80px;
+        bottom: 31px;
+        
+        max-width: 920px;
+    }
+}
+

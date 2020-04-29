@@ -1,0 +1,34 @@
+.travel {
+    position: relative;
+
+    padding-bottom: rem(311);
+
+    &__bg-airplane,
+    &__bg-cocktail {
+        position: absolute;
+        right: 0;
+    
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    &__bg-airplane {
+        bottom: 667px;
+    
+        width: 723px;
+        height: 377px;
+    
+        background-image: url(../img/airplane.png);
+    }
+    
+    &__bg-cocktail {
+        bottom: 60px;
+    
+        width: 321px;
+        height: 564px;
+    
+        background-image: url(../img/cocktail.png);
+    }
+}
+
+

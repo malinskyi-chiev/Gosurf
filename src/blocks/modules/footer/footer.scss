@@ -1,0 +1,31 @@
+.footer {
+    margin-bottom: rem(34);
+
+    text-align: center;
+
+    .btn {
+        font-size: rem(32);
+        line-height: rem(48);
+        margin-bottom: rem(27);
+
+        span {
+            padding: rem(8) rem(17);
+
+            &::after {
+                content: none;
+            }
+
+            &::before {
+                top: 31px;
+            }
+        }
+    }
+
+    &__text {
+        font-weight: 300;
+        font-size: rem(12);
+        line-height: rem(14);
+        color: rgba($white, 0.5);
+    }
+}
+

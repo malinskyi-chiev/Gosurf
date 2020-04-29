@@ -1,0 +1,118 @@
+.main-nav {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+
+    font-size: rem(12);
+    line-height: rem(14);
+
+    border-right: 1px solid rgba($white, 0.25);
+
+    &__title {
+        position: absolute;
+        left: 0;
+        top: 0;
+    
+        max-width: 467px;
+    
+        font-weight: 800;
+        font-size: rem(200);
+        line-height: rem(156);
+    
+        opacity: 0.07;
+    
+        z-index: 4;
+    }
+    
+    &__logo{
+        max-width: 168px;
+    }
+    
+    &__logo-icon {
+        overflow: hidden;
+    }
+    
+    &__list {
+        margin-top: rem(12);
+
+        z-index: 5;
+    }
+    
+    &__item {
+        & + & {
+            margin-top: rem(12);
+        }
+    }
+    
+    &__link {  
+        display: flex;
+        flex-direction: column;
+    
+        align-items: center;
+    }
+    
+    &__img {
+        margin-bottom: rem(6);
+
+        &--surf {
+            width: 58px;
+            height: 45px;
+        }
+        &--travel {
+            width: 49px;
+            height: 31px;
+        }
+        &--sleep {
+            width: 38px;
+            height: 32px;
+        }
+        &--shop {
+            width: 15px;
+            height: 43px;
+        }
+    }
+    
+    &__text {
+        font-weight: 500;
+        text-transform: capitalize;
+        letter-spacing: rem(3);
+    }
+    
+    &__search-icon {
+        display: block;
+        width: 24px;
+        height: 24px;
+        margin-top: rem(14);
+    }
+    
+    &__date {
+        margin-top: auto;
+    
+        text-align: center;
+    }
+    
+    &__date-num {
+        font-weight: 800;
+        font-size: rem(72);
+        line-height: rem(64);
+    }
+    
+    &__date-text {
+        font-weight: 300;
+        font-size: rem(16);
+        line-height: rem(19);
+    
+        letter-spacing: rem(1.4);
+    }
+
+    &__mapmarker {
+        width: 10px;
+        height: 12px;
+    }
+    
+    &__mapmarker-text {
+        font-weight: 300;
+        text-transform: capitalize;
+    }
+}

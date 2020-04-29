@@ -1,0 +1,137 @@
+.features {
+    &__card {
+        .btn {
+            display: block;
+        }
+    } 
+    
+    &__title-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    
+        background-repeat: no-repeat;
+    
+        &--travel {
+            min-height: 780px;
+            background-image: url(../img/travel-bg-1.png);
+        }
+    
+        &--sleep {
+            min-height: 771px;
+            background-image: url(../img/sleep-bg-1.png);
+        }
+    }
+    
+    &__title-descr {
+        position: relative;
+    
+        padding-right: rem(104);
+        max-width: max-content;
+    
+        font-weight: 400;
+        font-size: rem(22);
+        line-height: rem(32);
+        letter-spacing: rem(7.33);
+        
+        opacity: 0.5;
+    
+        &::after {
+            @include pseudo();
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+    
+            height: 1px;
+            width: 80px;
+    
+            background: $white;
+        }
+    }
+    
+    &__title {
+        margin-bottom: rem(77);
+    
+        font-weight: 800;
+        font-size: rem(40);
+        line-height: 1;
+    }
+    
+    &__title-descr,
+    &__title {
+        padding-left: rem(135);
+        padding-right: rem(135);
+    }
+    
+    &__icon {
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-position: center;
+    
+        &:nth-child(1) {
+            margin-left: rem(25);
+        }
+    
+        &--virgin {
+            width: 52px;
+            height: 46px;
+    
+            background-image: url(../img/svg/virgin-icon.svg);
+        }
+    }
+    
+    &__list {
+        display: flex;
+        margin-bottom: rem(190);
+        justify-content: space-between;
+        padding-left: rem(135);
+        padding-right: rem(135);
+    }
+    
+    &__item {
+        position: relative;
+    
+        padding-left: rem(40);
+    }
+    
+    &__property {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0;
+        height: 0;
+    
+        display: flex;
+        justify-content: flex-end;
+    
+        white-space: nowrap;
+        font-weight: 400;
+        font-size: rem(18);
+        line-height: rem(22);
+        letter-spacing: rem(8);
+        opacity: 0.5;
+    
+        transform: rotate(-90deg);
+    }
+    
+    &__text {
+        font-weight: 800;
+        font-size: rem(40);
+        line-height: rem(36);
+    }
+    
+    &__price {
+        font-weight: 800;
+        font-size: rem(34);
+        line-height: rem(36);
+    }
+    
+    &__price-text {
+        font-weight: normal;
+        font-size: rem(14);
+        line-height: rem(36);
+        text-align: right;
+        letter-spacing: rem(5.25);
+    }
+}
+

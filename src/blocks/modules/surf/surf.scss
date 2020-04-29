@@ -1,0 +1,354 @@
+.surf {
+    position: relative;
+
+    margin-bottom: rem(270);
+
+    background-image: url(../img/svg/surf-marker.svg);
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: auto;
+
+    &__map {
+        max-width: 1200px;
+        min-height: 635px;
+        margin: 0 auto 58px auto;
+    
+        background-image: url(../img/world-map-dots.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    
+        .slick-list {
+            min-height: 635px;
+        }
+    
+        .slick-track {
+            min-height: 635px;
+        }
+    
+        .slick-current {
+            .surf__content {
+                display: block;
+            }
+    
+            .surf__dot-icon {        
+                width: 24px;
+                height: 33px;
+            
+                border-radius: none;
+                box-shadow: none;
+    
+                background-image: url(../img/svg/drop-icon.svg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                background-color: transparent;
+            }
+        }
+    }
+    
+    &__map-slider-item {
+        position: absolute;
+    
+        &--1 {
+            top: 330px;
+            left: 30px;
+    
+            .surf__content {
+                transform: translateX(0);
+            }
+        }
+        
+        &--2 {
+            top: 290px;
+            left: 136px;
+    
+            &:after {
+                @include pseudo();
+    
+                top: -21px;
+                left: 30px;
+    
+                width: 13px;
+                height: 16px;
+    
+                background-image: url(../img/svg/mini-marker.svg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+        }
+        
+        &--3 {
+            top: 318px;
+            left: 338px;
+        }
+        
+        &--4 {
+            top: 212px;
+            left: 530px;
+        }
+        
+        &--5 {
+            top: 501px;
+            left: 413px;
+        }
+        
+        &--6 {
+            top: 555px;
+            left: 637px;
+        }
+        
+        &--7 {
+            top: 395px;
+            left: 798px;
+        }
+        
+        &--8 {
+            top: 491px;
+            left: 1089px;
+    
+            .surf__content {
+                transform: translateX(-60%);
+            }
+        }
+    }
+    
+    &__dot-icon {
+        position: absolute;
+    
+        width: 24px;
+        height: 24px;
+    
+        border-radius: 50%;
+        box-shadow: 0px 0px 35px rgba(74, 246, 205, 0.837777);
+    
+        background-color: $green;
+    }
+    
+    &__content {
+        position: relative;
+        top: -219px;
+    
+        display: none;
+        width: 283px;
+        padding: rem(28) rem(32) rem(31);
+    
+        background-color: rgba($black-tertiary, 0.7);
+        border-radius: 6px;
+    
+        transform: translateX(-50%);
+    }
+    
+    &__content-header {
+        margin-bottom: rem(30);
+    }
+    
+    &__content-title {
+        position: relative;
+        
+        margin-bottom: rem(14);
+    
+        font-weight: 800;
+        font-size: rem(18);
+        line-height: rem(26);
+    
+        &::after {
+            @include pseudo();
+            right: 0; 
+            top: 0;
+    
+            width: 24px;
+            height: 20px;
+    
+            background-image: url(../img/svg/arrow-right.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+    
+    &__content-subtitle {
+        position: relative;;
+    
+        font-weight: 400;
+        font-size: rem(16);
+        line-height: rem(19);
+    
+        &::after {
+            @include pseudo();
+            left: 0; 
+            top: -7px;
+    
+            height: 1px;
+            width: 80px;
+    
+            background-color: $green;
+        }
+    }
+    
+    &__content-list {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    &__content-icon {
+        margin-bottom: rem(7);
+    }
+    
+    &__content-num {
+        margin-bottom: rem(1);
+    
+        font-weight: 800;
+        font-size: rem(16);
+        line-height: rem(23);
+    }
+    
+    &__content-name {
+        font-weight: 300;
+        font-size: rem(10);
+        line-height: rem(12);
+    }
+    
+    &__arrow-prev,
+    &__arrow-next {
+        position: absolute;
+        top: 0;
+    
+        width: 24px;
+        height: 20px;
+        background-color: transparent;
+        border: none;
+    
+        z-index: 4;
+    }
+    
+    &__arrow-next {
+        right: 80px; 
+    }
+    
+    &__arrow-prev {
+        right: 124px; 
+    
+        z-index: 10;
+    }
+    
+    &__icon-prev,
+    &__icon-next {
+        position: relative;
+    
+        background-color: transparent;
+        border: none;
+    
+        opacity: 0.25;
+    
+        &::after {
+            @include pseudo();
+            left: 50%; 
+            top: 50%;
+            transform: translate(-50%, -50%);
+    
+            width: 24px;
+            height: 20px;
+        }
+    }
+    
+    &__icon-prev {
+        &::after {
+            background-image: url(../img/svg/arrow-left.svg);
+        }   
+    }
+    
+    &__icon-next {
+        &::after {
+            background-image: url(../img/svg/arrow-right.svg);
+        }
+    }
+    
+    &__icon-prev::after
+    &__icon-next::after {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    &__slider {
+        position: relative;
+    
+        padding-top: rem(53);
+    }
+    
+    &__card {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    
+        &--malibu {
+            background-image: url(../img/surf-slide-1.jpg);
+        }
+    
+        &--airlie {
+            background-image: url(../img/surf-slide-2.jpg);
+        }
+    
+        &--cloud {
+            background-image: url(../img/surf-slide-3.jpg);
+        }
+    
+        &--vieux {
+            background-image: url(../img/surf-slide-4.jpg);
+        }
+    }
+    
+    &__card-inner {
+        position: relative;
+    
+        display: flex;
+        flex-direction: column;
+        min-height: 750px;
+        padding: rem(72) 0 0 rem(40);
+    
+        background-color: rgba($black-secondary, 0.85);
+    
+        .btn {
+            display: none;
+        }
+    
+        &:hover {
+            background-color: rgba($black-secondary, 0.3);
+    
+            transition: all 0.5s;
+    
+            .btn {
+                display: block;
+            }
+        }
+    }
+    
+    &__title {
+        max-width: 152px;
+    
+        font-weight: 800;
+        font-size: rem(40);
+        line-height: rem(36);
+    }
+    
+    &__location {
+        position: absolute;
+        left: 38px;
+        bottom: 80px;
+    
+        width: 0;
+        height: 0;
+    
+        white-space: nowrap;
+        font-weight: 400;
+        font-size: rem(18);
+        line-height: rem(22);    
+        letter-spacing: rem(8);
+    
+        transform: rotate(-90deg);
+    }
+}
+
+

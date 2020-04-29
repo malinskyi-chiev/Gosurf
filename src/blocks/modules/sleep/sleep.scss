@@ -1,0 +1,33 @@
+.sleep {
+    position: relative;
+
+    padding-bottom: rem(298);
+
+    &__bg-hammock,
+    &__bg-frangipani {
+        position: absolute;
+        right: 0;
+    
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    &__bg-hammock {
+        bottom: 610px;
+    
+        width: 496px;
+        height: 414px;
+    
+        background-image: url(../img/hammock.png);
+    }
+    
+    &__bg-frangipani {
+        bottom: 260px;
+    
+        width: 187px;
+        height: 265px;
+    
+        background-image: url(../img/frangipani-m.png);
+    }
+}
+
